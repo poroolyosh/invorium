@@ -1,5 +1,5 @@
 @import './reset.css';
-
+@import './fonts/stylesheet.css';
 body {
   font-family: 'Gilroy', sans-serif;
   font-weight: 500;
@@ -11,13 +11,54 @@ body {
 }
 /* Button */
 .btn {
+  position: relative;
   display: inline-block;
   padding: 10px 24px;
+  padding-right: 72px;
   border: 1px solid #114455;
   border-radius: 2px;
   color: #114455;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
+  transition: color 0.15s ease-in, background-color 0.15s ease-in;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url('./../IMG/icons/arroy-right-black.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn:hover,
+.btn:focus {
+  background-color: #114455;
+  color: #fff;
+}
+.btn:active {
+  top: 1px;
+}
+.btn:hover::after {
+  background-image: url('./../IMG/icons/arroy-right-white.svg');
+}
+.btn--big {
+  padding: 14px 32px;
+  padding-right: 80px;
+}
+.btn--dark {
+  background-color: #114455;
+  color: #fff;
+}
+.btn--dark:hover,
+.btn--dark:focus {
+  background-color: #000;
+}
+.btn--dark::after {
+  background-image: url('./../IMG/icons/arroy-right-white.svg');
 }
 
 /* Header */
@@ -31,7 +72,11 @@ body {
 
 .header__top {
   padding: 44px 0;
+  margin-bottom: 126px;
 }
+
+/* Nav */
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -45,5 +90,34 @@ body {
 .link {
   color: #114455;
   font-size: 20px;
+  font-weight: 700;
+}
+
+/* Header content */
+
+.header__content {
+  max-width: 1060px;
+}
+.header__title {
+  max-width: 734px;
   font-weight: 800;
+  font-size: 80px;
+  line-height: 98px;
+  color: #114455;
+}
+.header__text {
+  margin-bottom: 72px;
+  font-size: 34px;
+  color: darkgrey;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.header__text p + p {
+  margin-top: 1em;
+}
+
+.header__btn {
+  margin: 0;
 }
