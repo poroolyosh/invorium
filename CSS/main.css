@@ -200,7 +200,7 @@ body {
   position: relative;
 }
 
-.video::after {
+.video-overlay::after {
   content: '';
   position: absolute;
   left: 0;
@@ -226,4 +226,5 @@ body {
 
 .video__object {
   width: 100%;
+  vertical-align: top;
 }
