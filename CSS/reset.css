@@ -47,7 +47,7 @@ main {
   display: block;
 }
 
-h1,
+/*h1,
 h2,
 h3,
 h4,
@@ -56,7 +56,7 @@ h6,
 p {
   font-size: inherit;
   font-weight: inherit;
-}
+}*/
 
 ul,
 ul li {
@@ -94,7 +94,7 @@ input::-ms-clear {
 }
 
 button,
-input[type='submit'] {
+input[type="submit"] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -120,4 +120,12 @@ label {
 
 legend {
   display: block;
+}
+
+.stop {
+  color: blueviolet;
+}
+
+.stop--big {
+  font-size: 50px;
 }
